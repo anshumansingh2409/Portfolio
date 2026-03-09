@@ -4,6 +4,7 @@ import { Award, Star, Eye } from 'lucide-react';
 
 const internshipImg = '/assets/Internship.jpeg';
 
+const c1Img = '/assets/c1.jpeg';
 const c2Img = '/assets/c2.jpeg';
 const c3Img = '/assets/c3.jpeg';
 const c4Img = '/assets/c4.jpeg';
