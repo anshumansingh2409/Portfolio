@@ -3,7 +3,8 @@ import { useRef } from "react";
 import { Calendar, Award, Briefcase } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
-const myPhoto = new URL('../assets/Image.png', import.meta.url).href;
+// const myPhoto = new URL('../assets/Image.png', import.meta.url).href;
+const myPhoto = '/assets/Image.png';
 
 export function About() {
   const ref = useRef(null);

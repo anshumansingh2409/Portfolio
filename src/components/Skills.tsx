@@ -1,20 +1,20 @@
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 
-import htmlLogo from "../assets/html.png";
-import cssLogo from "../assets/cssLogo.png";
-import jsLogo from "../assets/jsLogo.png";
-import reactLogo from "../assets/React.png";
-import tailwindLogo from "../assets/tailwindLogo.png";
+const htmlLogo = '/assets/html.png';
+const cssLogo = '/assets/cssLogo.png';
+const jsLogo = '/assets/jsLogo.png';
+const reactLogo = '/assets/React.png';
+const tailwindLogo = '/assets/tailwindLogo.png';
 
-import javaLogo from "../assets/Java.png";
-import pythonLogo from "../assets/Python.png";
+const javaLogo = '/assets/Java.png';
+const pythonLogo = '/assets/Python.png';
 
-import gitLogo from "../assets/git.png";
-import githubLogo from "../assets/github.png";
-import vscodeLogo from "../assets/vscode.png";
-import canvaLogo from "../assets/Canva.png";
-import figmaLogo from "../assets/Figma.png";
+const gitLogo = '/assets/Git.png';
+const githubLogo = '/assets/github.png';
+const vscodeLogo = '/assets/vscode.png';
+const canvaLogo = '/assets/Canva.png';
+const figmaLogo = '/assets/Figma.png';
 
 
 

@@ -3,9 +3,9 @@ import { useRef, useState } from "react";
 import { ExternalLink, Github } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
-const DashBoard = new URL("../assets/DashBoard.png", import.meta.url).href;
-const SpotifyClone = new URL("../assets/SpotifyClone.png", import.meta.url).href;
-const Tomato = new URL("../assets/Tomato.png", import.meta.url).href;
+const DashBoard = '/assets/DashBoard.png';
+const SpotifyClone = '/assets/SpotifyClone.png';
+const Tomato = '/assets/Tomato.png';
 
 export function Projects() {
   const ref = useRef(null);
