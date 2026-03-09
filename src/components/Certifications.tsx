@@ -2,12 +2,12 @@ import { motion } from 'motion/react';
 import { useRef } from 'react';
 import { Award, Star, Eye } from 'lucide-react';
 
-const internshipImg = new URL('../assets/Internship.jpeg', import.meta.url).href;
-const c1Img = new URL('../assets/c1.jpeg', import.meta.url).href;
-const c2Img = new URL('../assets/c2.jpeg', import.meta.url).href;
-const c3Img = new URL('../assets/c3.jpeg', import.meta.url).href;
-const c4Img = new URL('../assets/c4.jpeg', import.meta.url).href;
-const c5Img = new URL('../assets/c5.jpeg', import.meta.url).href;
+const internshipImg = '/assets/Internship.jpeg';
+
+const c2Img = '/assets/c2.jpeg';
+const c3Img = '/assets/c3.jpeg';
+const c4Img = '/assets/c4.jpeg';
+const c5Img = '/assets/c5.jpeg';
 
 export function Certifications() {
   const certifications = [
@@ -83,6 +83,14 @@ export function Certifications() {
                       </span>
                     ))}
                   </div>
+                  
+                  <button
+                    onClick={() => window.open(cert.image, '_blank')}
+                    className="mt-4 w-full flex items-center justify-center gap-2 px-3 py-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-lg text-sm font-semibold transition-all duration-200 hover:shadow-lg hover:shadow-purple-500/50"
+                  >
+                    <Eye className="w-4 h-4" />
+                    View Certificate
+                  </button>
                 </div>
                 <div className={`h-1 bg-gradient-to-r ${cert.gradient}`} />
               </div>
