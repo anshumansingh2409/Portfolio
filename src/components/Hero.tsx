@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { ArrowRight, Download, Mail, MapPin, Phone } from 'lucide-react';
 
 const roles = [
-  "Frontend Developer",
+  "Full Stack Developer",
   "Java Programming Solver",
   "UI/UX Designer",
   "React Developer",
@@ -11,7 +11,7 @@ const roles = [
 ];
 
 const roleColors = [
-  "from-blue-400 via-cyan-400 to-blue-400",      // Frontend Developer
+  "from-blue-400 via-cyan-400 to-blue-400",      // Full Stack Developer
   "from-green-400 via-emerald-400 to-green-400", // Java Programming Solver
   "from-pink-400 via-rose-400 to-pink-400",      // UI/UX Designer
   "from-yellow-400 via-orange-400 to-yellow-400", // React Developer
@@ -91,11 +91,11 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-5xl md:text-7xl font-bold mb-8 pt-32"
+              className="text-5xl md:text-6xl font-bold mb-8 pt-32"
             >
               <span className="text-white">Hi, I'm</span>
               <br />
-              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="bg-blue-700 bg-clip-text text-transparent">
                 Anshuman Singh
               </span>
             </motion.h1>
@@ -157,7 +157,7 @@ export function Hero() {
             >
               <motion.button
                 onClick={() => scrollToSection('contact')}
-                className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-medium overflow-hidden"
+                className="group relative px-8 py-4 bg-cyan-900 text-white rounded-full font-medium overflow-hidden"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -328,7 +328,7 @@ export function Hero() {
                   >
                     <h4 className="text-white font-bold mb-4">Tech Stack</h4>
                     <div className="flex flex-wrap gap-2">
-                      {['React', 'TypeScript', 'TailwindCSS', 'MongoDB', 'AWS'].map((tech, index) => (
+                      {['React','.jsx', '.tsx','HTML', 'CSS','JavaScript','TailwindCSS'].map((tech, index) => (
                         <motion.span
                           key={tech}
                           className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-lg text-white text-sm font-medium border border-white/30"

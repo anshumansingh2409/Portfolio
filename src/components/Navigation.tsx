@@ -77,29 +77,122 @@ export function Navigation() {
           <div className="hidden lg:grid grid-cols-3 items-center gap-8">
             {/* LEFT SECTION - Logo */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.1, type: "spring" }}
-            >
-              <motion.a
-                href="#hero"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection('#hero');
-                }}
-                className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent relative group"
-                whileHover={{ scale: 1.08 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Portfolio
-                <motion.div
-                  className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"
-                  initial={{ scaleX: 0 }}
-                  whileHover={{ scaleX: 1 }}
-                  transition={{ duration: 0.3 }}
-                />
-              </motion.a>
-            </motion.div>
+  initial={{ opacity: 0, x: -40 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8, type: "spring" }}
+  className="relative"
+>
+  <motion.a
+    href="#hero"
+    onClick={(e) => {
+      e.preventDefault();
+      scrollToSection('#hero');
+    }}
+    className="relative inline-flex items-center gap-4 group"
+    whileHover={{ scale: 1.03 }}
+    whileTap={{ scale: 0.96 }}
+  >
+    {/* Animated Vertical Bar */}
+    <motion.div
+      className="relative w-1 h-12 rounded-full bg-gradient-to-b from-cyan-400 via-blue-500 to-indigo-600 overflow-hidden"
+      animate={{
+        height: [48, 56, 48],
+      }}
+      transition={{
+        duration: 2.5,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
+    >
+      <motion.div
+        className="absolute inset-0 bg-white/40"
+        animate={{
+          y: ["-100%", "120%"],
+        }}
+        transition={{
+          duration: 1.5,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+      />
+    </motion.div>
+
+    {/* Name Section */}
+    <div className="relative">
+      {/* Background Glow */}
+      <motion.div
+        className="absolute inset-0 bg-cyan-500/20 blur-2xl rounded-full"
+        animate={{
+          opacity: [0.2, 0.6, 0.2],
+          scale: [1, 1.08, 1],
+        }}
+        transition={{
+          duration: 3,
+          repeat: Infinity,
+        }}
+      />
+
+      <motion.h1
+        className="relative text-2xl font-black tracking-wide bg-gradient-to-r from-white via-cyan-200 to-blue-400 bg-clip-text text-transparent"
+        whileHover={{
+          x: 4,
+        }}
+        transition={{ type: "spring", stiffness: 300 }}
+      >
+        Anshuman Singh
+      </motion.h1>
+
+      {/* Animated Tech Line */}
+      <motion.div
+        className="flex items-center gap-2 mt-1"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4 }}
+      >
+        <motion.div
+          className="w-2 h-2 rounded-full bg-cyan-400"
+          animate={{
+            scale: [1, 1.6, 1],
+            opacity: [0.5, 1, 0.5],
+          }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+          }}
+        />
+
+        <span className="text-[11px] uppercase tracking-[0.25em] text-slate-400 font-semibold">
+          Full Stack Developer
+        </span>
+
+        <motion.div
+          className="h-[1px] w-8 bg-gradient-to-r from-cyan-400 to-transparent"
+          animate={{
+            width: [30, 45, 30],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+          }}
+        />
+      </motion.div>
+    </div>
+
+    {/* Floating Orb */}
+    <motion.div
+      className="absolute -top-1 -right-4 w-3 h-3 rounded-full bg-cyan-400 shadow-lg shadow-cyan-400/60"
+      animate={{
+        y: [0, -8, 0],
+        opacity: [0.5, 1, 0.5],
+      }}
+      transition={{
+        duration: 2,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
+    />
+  </motion.a>
+</motion.div>
 
             {/* CENTER SECTION - Navigation Items in Border Box */}
             <motion.div
